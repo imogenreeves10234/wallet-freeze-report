@@ -160,7 +160,7 @@
   <h2>Your three questions, answered</h2>
   <div class="qa">
     <div class="q">1 · What the f*** happened?</div>
-    <div class="a">Tether blacklisted your address on 6 July 2026 at 13:56:54 UTC (7:26 PM IST). The freeze was queued
+    <div class="a">Tether blacklisted your address on 6 July 2026 at 13:56:54 UTC. The freeze was queued
     inside Tether's admin system 16 minutes earlier, at 13:40:15 UTC, as part of a batch that froze <b>11 wallets in one
     sweep</b> — the standard pattern when an investigator hands Tether a case file with a list of addresses. Your USDT
     balance is untouched; it simply cannot leave.</div>
@@ -170,7 +170,7 @@
     The only thing you can still move is 94.860634 TRX (≈ $31.53).</div>
     <div class="q">3 · Why did my transfers vanish or fail?</div>
     <div class="a">Your TronLink transfer <b>did</b> reach the blockchain — a 10 USDT test on 7 July at 16:34:42 UTC
-    (10:04 PM IST) — and the USDT contract rejected it with status <b>REVERT</b> because the sender is blacklisted.
+    — and the USDT contract rejected it with status <b>REVERT</b> because the sender is blacklisted.
     TronLink hides failed transactions from its history, so it looked like it "disappeared". MetaMask doesn't support
     the TRON network at all, so its "insufficient funds" message was about an empty Ethereum account — unrelated and meaningless.</div>
   </div>
@@ -205,14 +205,14 @@
 
   <div class="card icey">
     <h3>Step 1 — Freeze queued (the decision)</h3>
-    <p>6 July 2026, <b>13:40:15 UTC</b> (7:10 PM IST). Tether compliance wallet <code style="font-family:var(--mono);font-size:13px">TYn9kGVa…xmyN1</code>
+    <p>6 July 2026, <b>13:40:15 UTC</b>. Tether compliance wallet <code style="font-family:var(--mono);font-size:13px">TYn9kGVa…xmyN1</code>
     submitted multisig job <b>#10025</b>: <span style="font-family:var(--mono)">addBlackList(TFBqWs…k1tVo)</span>. Your address is embedded in the call data.</p>
     <div class="hashrow"><span class="lbl">Submission tx</span><code id="h1">888f152d556cc5cf75aaad48a9591d8e6d428be324ff879962ed1c9ce24dd6ec</code><button class="cbtn" data-copy="h1">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/888f152d556cc5cf75aaad48a9591d8e6d428be324ff879962ed1c9ce24dd6ec" target="_blank" rel="noopener">Tronscan ↗</a></div>
   </div>
 
   <div class="card icey">
     <h3>Step 2 — Freeze executed (the block itself)</h3>
-    <p>6 July 2026, <b>13:56:54 UTC</b> (7:26 PM IST), block <b>84,225,442</b>. A second Tether signer confirmed job #10025 and the
+    <p>6 July 2026, <b>13:56:54 UTC</b>, block <b>84,225,442</b>. A second Tether signer confirmed job #10025 and the
     USDT contract emitted <span style="font-family:var(--mono)">AddedBlackList(TFBqWs…k1tVo)</span>. From this second onward, the wallet could not send USDT.</p>
     <div class="hashrow"><span class="lbl">Execution tx</span><code id="h2">3916a7f895dfd9f0d0b05a84ce40e4950424edc54b0554c9542c6394d48feec4</code><button class="cbtn" data-copy="h2">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/3916a7f895dfd9f0d0b05a84ce40e4950424edc54b0554c9542c6394d48feec4" target="_blank" rel="noopener">Tronscan ↗</a></div>
   </div>
@@ -378,7 +378,7 @@
 
 <div class="footer">
   <b>Report scope:</b> on-chain analysis of TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo only. Data pulled 7 July 2026 ≈17:20 UTC, TRON mainnet.
-  All timestamps UTC (IST = UTC+5:30). This page contains no private keys and grants no access to funds.
+  All timestamps UTC. This page contains no private keys and grants no access to funds.
   <div class="vline">verification: pass A (on-chain numbers, 10/10 confirmed) · pass B (facts &amp; sources, 7/7 confirmed) · zero mismatches</div>
 </div>
 
