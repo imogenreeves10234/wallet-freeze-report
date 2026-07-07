@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Wallet Freeze Report — TFBqWs…k1tVo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E14'/%3E%3Cg stroke='%237FD4FF' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='50' y1='18' x2='50' y2='82'/%3E%3Cline x1='22' y1='34' x2='78' y2='66'/%3E%3Cline x1='78' y1='34' x2='22' y2='66'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0A0E14; --panel:#111722; --panel2:#0D1320; --line:#1E2836;
+    --text:#E8EDF4; --muted:#8A97A8; --ice:#7FD4FF; --ice-dim:#3A6E8F;
+    --amber:#FFB454; --red:#FF7A7A; --green:#58D6A3;
+    --mono:ui-monospace,'SF Mono','Cascadia Mono','JetBrains Mono',Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{background:var(--ink);color:var(--text);font-family:var(--sans);line-height:1.65;font-size:16.5px;
+       background-image:radial-gradient(1100px 500px at 70% -10%, rgba(127,212,255,.05), transparent 60%)}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 90px}
+  a{color:var(--ice);text-decoration:none;border-bottom:1px solid rgba(127,212,255,.25)}
+  a:hover{border-bottom-color:var(--ice)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ice);outline-offset:2px;border-radius:4px}
+
+  /* ---------- header / verdict ---------- */
+  header{padding:64px 0 8px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+  h1{font-size:clamp(28px,5.5vw,44px);font-weight:800;letter-spacing:-.02em;line-height:1.12;margin:14px 0 6px}
+  h1 .ice{color:var(--ice)}
+  .subject{font-family:var(--mono);font-size:13.5px;color:var(--muted);margin-top:10px;word-break:break-all}
+  .stamp{display:inline-block;margin:26px 0 8px;padding:10px 22px;border:3px double var(--ice);border-radius:6px;
+         transform:rotate(-1.6deg);font-family:var(--mono);font-weight:700;font-size:clamp(15px,3vw,20px);
+         letter-spacing:.24em;color:var(--ice);text-transform:uppercase;background:rgba(127,212,255,.06)}
+  .verdict{margin-top:18px;padding:22px 24px;background:linear-gradient(180deg,rgba(127,212,255,.09),rgba(127,212,255,.03));
+           border:1px solid rgba(127,212,255,.3);border-radius:14px;font-size:17.5px}
+  .verdict strong{color:var(--ice)}
+
+  /* ---------- toc ---------- */
+  nav{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 10px}
+  nav a{font-family:var(--mono);font-size:12.5px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;
+        color:var(--muted);background:var(--panel2)}
+  nav a:hover{color:var(--ice);border-color:var(--ice-dim)}
+
+  /* ---------- sections ---------- */
+  section{margin-top:58px}
+  h2{font-size:clamp(21px,3.4vw,27px);font-weight:750;letter-spacing:-.015em;margin-bottom:6px}
+  h2 .tag{display:inline-block;vertical-align:4px;margin-left:10px;font-family:var(--mono);font-size:11px;
+          letter-spacing:.14em;padding:4px 9px;border-radius:5px;text-transform:uppercase}
+  .tag.blue{background:rgba(127,212,255,.12);color:var(--ice)}
+  .tag.redt{background:rgba(255,122,122,.13);color:var(--red)}
+  .tag.grn{background:rgba(88,214,163,.13);color:var(--green)}
+  .lede{color:var(--muted);margin-bottom:22px;max-width:66ch}
+  p+p{margin-top:12px}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:18px}
+  .card h3{font-size:16px;font-weight:700;margin-bottom:8px}
+  .card.icey{border-color:rgba(127,212,255,.35);background:linear-gradient(180deg,rgba(127,212,255,.07),var(--panel) 55%)}
+  .card.warn{border-color:rgba(255,180,84,.4)}
+  .card.danger{border-color:rgba(255,122,122,.4)}
+
+  /* ---------- stat grid ---------- */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:12px;margin-top:20px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 18px 15px}
+  .stat .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .stat .v{font-family:var(--mono);font-size:clamp(19px,2.6vw,24px);font-weight:700;margin-top:7px;letter-spacing:-.01em}
+  .stat .s{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .v.ice{color:var(--ice)} .v.red{color:var(--red)} .v.grn{color:var(--green)} .v.amb{color:var(--amber)}
+
+  /* ---------- tables ---------- */
+  .tblwrap{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
+     text-align:left;padding:12px 14px;background:var(--panel2);border-bottom:1px solid var(--line)}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  td.num{font-family:var(--mono);white-space:nowrap}
+  td.frozencell{color:var(--ice)} .zero{color:var(--red);font-weight:600}
+  .ok{color:var(--green);font-weight:600}
+
+  /* ---------- hash rows with copy ---------- */
+  .hashrow{display:flex;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);
+           border-radius:10px;padding:10px 12px;margin-top:10px;flex-wrap:wrap}
+  .hashrow .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);min-width:150px}
+  .hashrow code{font-family:var(--mono);font-size:12.8px;color:var(--text);word-break:break-all;flex:1;min-width:200px}
+  .cbtn{font-family:var(--mono);font-size:12px;padding:6px 13px;border-radius:7px;border:1px solid var(--ice-dim);
+        background:transparent;color:var(--ice);cursor:pointer;white-space:nowrap}
+  .cbtn:hover{background:rgba(127,212,255,.1)}
+  .cbtn.done{border-color:var(--green);color:var(--green)}
+  .ext{font-family:var(--mono);font-size:11.5px;white-space:nowrap}
+
+  /* ---------- timeline / freeze line ---------- */
+  .timeline{position:relative;margin-top:26px;padding-left:34px}
+  .timeline::before{content:"";position:absolute;left:11px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .tl{position:relative;padding:0 0 26px}
+  .tl::before{content:"";position:absolute;left:-29px;top:7px;width:12px;height:12px;border-radius:50%;
+              background:var(--ink);border:2px solid var(--muted)}
+  .tl .when{font-family:var(--mono);font-size:12.5px;color:var(--muted)}
+  .tl .what{margin-top:3px;max-width:64ch}
+  .tl .what b{font-weight:650}
+  .tl.freeze{margin:6px 0 30px;padding:18px 20px;background:linear-gradient(90deg,rgba(127,212,255,.13),rgba(127,212,255,.02));
+             border:1px solid rgba(127,212,255,.45);border-radius:12px}
+  .tl.freeze::before{border-color:var(--ice);background:var(--ice);box-shadow:0 0 14px rgba(127,212,255,.8);top:24px}
+  .tl.freeze .when{color:var(--ice);font-weight:700}
+  .tl.frozen-era::before{border-color:var(--ice-dim)}
+  .tl.frozen-era .when{color:var(--ice-dim)}
+  .tl.bad::before{border-color:var(--red)}
+
+  /* ---------- do / don't ---------- */
+  .dd{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;margin-top:18px}
+  ul.actions{list-style:none}
+  ul.actions li{padding:9px 0 9px 30px;position:relative;border-bottom:1px dashed var(--line)}
+  ul.actions li:last-child{border-bottom:none}
+  ul.actions li::before{position:absolute;left:0;top:9px;font-family:var(--mono);font-weight:700}
+  .card.danger ul.actions li::before{content:"✕";color:var(--red)}
+  .card.warn ul.actions li::before{content:"→";color:var(--amber)}
+  .small{font-size:13px;color:var(--muted)}
+  .footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  .footer .vline{font-family:var(--mono);font-size:12px;margin-top:8px}
+  details{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+  summary{cursor:pointer;padding:12px 16px;font-weight:600;font-size:14.5px;color:var(--muted)}
+  details[open] summary{border-bottom:1px solid var(--line);color:var(--text)}
+  details .inner{padding:8px 16px 14px}
+  .qa{margin-top:16px}
+  .qa .q{font-weight:700;color:var(--ice)}
+  .qa .a{margin:4px 0 16px;max-width:68ch}
+  .batch{font-family:var(--mono);font-size:12.8px;line-height:2;word-break:break-all}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">On-chain forensic report · TRON network · Data as of 7 July 2026, 17:20 UTC</div>
+  <h1>Your 1,334,619 USDT is real, still in the wallet —<br>and <span class="ice">frozen by Tether</span>.</h1>
+  <div class="subject">Wallet: TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo</div>
+  <div class="stamp">Blacklisted · 6 Jul 2026 · 13:56:54 UTC</div>
+  <div class="verdict">
+    <strong>Nothing was stolen and nobody hacked you.</strong> On 6 July 2026 Tether — the company that issues USDT —
+    added this wallet to the USDT contract's blacklist, almost certainly at the request of a law-enforcement or fraud
+    investigation. A blacklisted wallet can still <em>receive</em> USDT, but every attempt to <em>send</em> USDT is
+    rejected by the token contract itself. No app, wallet, or paid "service" can bypass this. Only Tether can lift it.
+  </div>
+</header>
+
+<nav aria-label="Sections">
+  <a href="#answers">30-second answers</a>
+  <a href="#holdings">What's in the wallet</a>
+  <a href="#freezetx">The blocking transaction</a>
+  <a href="#timeline">Timeline</a>
+  <a href="#why">Why transfers fail</a>
+  <a href="#spam">The spam tokens</a>
+  <a href="#actions">Do / never do</a>
+  <a href="#recovery">Recovery odds</a>
+  <a href="#evidence">Evidence</a>
+</nav>
+
+<section id="answers">
+  <h2>Your three questions, answered</h2>
+  <div class="qa">
+    <div class="q">1 · What the f*** happened?</div>
+    <div class="a">Tether blacklisted your address on 6 July 2026 at 13:56:54 UTC (7:26 PM IST). The freeze was queued
+    inside Tether's admin system 16 minutes earlier, at 13:40:15 UTC, as part of a batch that froze <b>11 wallets in one
+    sweep</b> — the standard pattern when an investigator hands Tether a case file with a list of addresses. Your USDT
+    balance is untouched; it simply cannot leave.</div>
+    <div class="q">2 · Exactly how much is USDT and how much is spam?</div>
+    <div class="a"><b>1,334,619.952212 real USDT</b> (≈ $1,334,619.95) — genuine Tether, frozen in place. Every "UNFREEZE /
+    UNBANNED / FREEZE" token and ~40 other airdropped tokens are <b>worth $0.00</b> — they are scam advertisements, not money.
+    The only thing you can still move is 94.860634 TRX (≈ $31.53).</div>
+    <div class="q">3 · Why did my transfers vanish or fail?</div>
+    <div class="a">Your TronLink transfer <b>did</b> reach the blockchain — a 10 USDT test on 7 July at 16:34:42 UTC
+    (10:04 PM IST) — and the USDT contract rejected it with status <b>REVERT</b> because the sender is blacklisted.
+    TronLink hides failed transactions from its history, so it looked like it "disappeared". MetaMask doesn't support
+    the TRON network at all, so its "insufficient funds" message was about an empty Ethereum account — unrelated and meaningless.</div>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="k">Frozen USDT</div><div class="v ice">1,334,619.95</div><div class="s">real Tether USD · exact: 1,334,619.952212</div></div>
+    <div class="stat"><div class="k">Spam-token value</div><div class="v red">$0.00</div><div class="s">≈ 3.7M fake "units" across 40+ tokens</div></div>
+    <div class="stat"><div class="k">Still movable</div><div class="v grn">94.86 TRX</div><div class="s">≈ $31.53 @ $0.332391</div></div>
+    <div class="stat"><div class="k">Caught after freeze was queued</div><div class="v amb">+$276,600</div><div class="s">5 deposits landed into the trap</div></div>
+  </div>
+</section>
+
+<section id="holdings">
+  <h2>What's in the wallet right now</h2>
+  <p class="lede">Live balances pulled directly from the TRON blockchain and re-verified by two independent passes.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Asset</th><th>Amount</th><th>Real value</th><th>Can it move?</th></tr></thead>
+    <tbody>
+      <tr><td><b>USDT</b> (genuine Tether, TRC-20)</td><td class="num frozencell">1,334,619.952212</td><td class="num">≈ $1,334,619.95</td><td class="frozencell">❄ Frozen — sends revert</td></tr>
+      <tr><td><b>TRX</b> (native coin)</td><td class="num">94.860634</td><td class="num">≈ $31.53</td><td class="ok">Yes</td></tr>
+      <tr><td>"UNFREEZE / UNBANNED / FREEZE / 解冻" spam (10 TRC-20 tokens)</td><td class="num">≈ 3,706,674 units</td><td class="num zero">$0.00</td><td>Movable but worthless</td></tr>
+      <tr><td>Casino / gas-rental spam (30 TRC-10 tokens)</td><td class="num">various</td><td class="num zero">$0.00</td><td>Movable but worthless</td></tr>
+    </tbody>
+  </table></div>
+  <p class="small" style="margin-top:10px">Wallet flow since creation (28 Jul 2024): <b>14,931,280.96 USDT in</b> over 352 deposits from 155 senders ·
+  <b>13,596,661.01 USDT out</b> over 169 payments · net = the frozen 1,334,619.95. Balance math checks to the exact cent.</p>
+</section>
+
+<section id="freezetx">
+  <h2>The exact transaction that blocked the wallet <span class="tag blue">your question</span></h2>
+  <p class="lede">Two on-chain transactions did it — Tether runs freezes through a two-step admin multisig. Both are public and permanent:</p>
+
+  <div class="card icey">
+    <h3>Step 1 — Freeze queued (the decision)</h3>
+    <p>6 July 2026, <b>13:40:15 UTC</b> (7:10 PM IST). Tether compliance wallet <code style="font-family:var(--mono);font-size:13px">TYn9kGVa…xmyN1</code>
+    submitted multisig job <b>#10025</b>: <span style="font-family:var(--mono)">addBlackList(TFBqWs…k1tVo)</span>. Your address is embedded in the call data.</p>
+    <div class="hashrow"><span class="lbl">Submission tx</span><code id="h1">888f152d556cc5cf75aaad48a9591d8e6d428be324ff879962ed1c9ce24dd6ec</code><button class="cbtn" data-copy="h1">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/888f152d556cc5cf75aaad48a9591d8e6d428be324ff879962ed1c9ce24dd6ec" target="_blank" rel="noopener">Tronscan ↗</a></div>
+  </div>
+
+  <div class="card icey">
+    <h3>Step 2 — Freeze executed (the block itself)</h3>
+    <p>6 July 2026, <b>13:56:54 UTC</b> (7:26 PM IST), block <b>84,225,442</b>. A second Tether signer confirmed job #10025 and the
+    USDT contract emitted <span style="font-family:var(--mono)">AddedBlackList(TFBqWs…k1tVo)</span>. From this second onward, the wallet could not send USDT.</p>
+    <div class="hashrow"><span class="lbl">Execution tx</span><code id="h2">3916a7f895dfd9f0d0b05a84ce40e4950424edc54b0554c9542c6394d48feec4</code><button class="cbtn" data-copy="h2">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/3916a7f895dfd9f0d0b05a84ce40e4950424edc54b0554c9542c6394d48feec4" target="_blank" rel="noopener">Tronscan ↗</a></div>
+  </div>
+
+  <div class="card">
+    <h3>What triggered it — and what didn't</h3>
+    <p>The freeze was queued at 13:40 UTC, <b>seven minutes before</b> the day's big deposit (237,250.63 USDT at 13:47).
+    So that deposit did <b>not</b> cause the freeze — the decision was already made from earlier activity. Tether never
+    publishes per-address reasons, so no public data can name the exact "poisoned" deposit. What the chain does prove:
+    your wallet was one of <b>11 addresses frozen together</b> in jobs #10023–#10033 — one coordinated case bundle,
+    typically a list supplied by law enforcement. None of your recent counterparties are blacklisted — the list targeted
+    your wallet itself. The reason sits in that case file, and getting it means going through Tether / the requesting agency.</p>
+  </div>
+
+  <details><summary>The 10 wallets frozen alongside yours (same batch — show this to your lawyer)</summary>
+    <div class="inner batch">
+      TH9sfz5hxJcgWHUd6d9PudnRU7eY9qmENF<br>TBDAokiZUUL8Snxi3bYzGr4oeb6Pyuy2fn<br>TCfjHzdetvFQGXn5546GRLeVfV2iGrkmEd<br>
+      TCYfF4qCHTxN7tnLVkAeVdGe9rs5Ky9htU<br>TUfnLtNy9BGKJJNqPufnjseHGYnEGbiT94<br>TRyWxc2N7kJ5WfRGVi1oLMsgcBzJrvMazj<br>
+      TTSP6e8G3Bu3wNB6ppRXMAwcVnmBWij5CW<br>TLrczRYAgESX76VxREd2uPqzGMpvngucRN<br>TQrq4kdXhfTMz6Y9EuGKcwSFdhTNLr4kKq<br>
+      TQzzYdW4JCdd16DfaQ4nvGMQBTS7iZMHdW
+      <p class="small" style="margin-top:10px">If you recognise any of these as yours, a partner's, or a platform's — that identifies which relationship the case is about.</p>
+    </div>
+  </details>
+</section>
+
+<section id="timeline">
+  <h2>Timeline — one second splits everything</h2>
+  <div class="timeline">
+    <div class="tl"><div class="when">28 Jul 2024</div><div class="what"><b>Wallet's first USDT deposit.</b> Over the next 23 months it handles ~$14.9M in / ~$13.6M out — high-volume, working normally.</div></div>
+    <div class="tl"><div class="when">30 Jun 2026 · 15:03 UTC</div><div class="what"><b>Last successful send:</b> 250,000 USDT out. Everything still works.</div></div>
+    <div class="tl"><div class="when">6 Jul 2026 · 13:40:15 UTC</div><div class="what"><b>Tether queues the freeze</b> (multisig job #10025, 1 of 11 addresses in the batch). The trap is set — nothing visible in your wallet yet.</div></div>
+    <div class="tl"><div class="when">6 Jul 2026 · 13:47–13:51 UTC</div><div class="what"><b>255,000.63 USDT lands</b> in three deposits (237,250.63 + 12,750 + 5,000) — into a wallet already marked for freezing.</div></div>
+    <div class="tl freeze"><div class="when">6 Jul 2026 · 13:56:54 UTC — THE FREEZE</div><div class="what"><b>AddedBlackList executes at block 84,225,442.</b> From this moment, USDT can enter but never leave. Balance locked: everything below this line happens to a frozen wallet.</div></div>
+    <div class="tl frozen-era"><div class="when">6 Jul 2026 · 14:08 UTC (12 min later)</div><div class="what"><b>Scam bots arrive.</b> "UNFREEZE TG:UFT6699" tokens airdropped — scavengers monitor Tether's blacklist feed and instantly spam frozen wallets with fake rescue ads. 9 more spam tokens follow within a day.</div></div>
+    <div class="tl frozen-era"><div class="when">7 Jul 2026 · 06:25 &amp; 10:07 UTC</div><div class="what"><b>21,600 more USDT arrives</b> (18,600 + 3,000) — also now frozen. Incoming payments must stop.</div></div>
+    <div class="tl bad"><div class="when">7 Jul 2026 · 16:34:42 UTC</div><div class="what"><b>Your 10 USDT test transfer hits the chain and REVERTs.</b> TronLink hides the failed transaction — your "disappearing" transfer. Fee burned: 0.4466 TRX.</div></div>
+  </div>
+</section>
+
+<section id="why">
+  <h2>Why every transfer fails <span class="tag blue">mechanics</span></h2>
+  <p class="lede">The genuine USDT contract (<span style="font-family:var(--mono);font-size:13px">TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t</span>) contains
+  a blacklist that only Tether's multisig can edit. Its transfer function checks the <em>sender</em>: if the sender is blacklisted, the transfer reverts.
+  It does not check the recipient — which is why money still flows <em>in</em>.</p>
+  <div class="card">
+    <h3>What each wallet app showed you, decoded</h3>
+    <p><b>TronLink</b> — accepted your signature and broadcast the transaction. The network executed it, the contract said REVERT,
+    and TronLink dropped the failed entry from your activity list after a few minutes. It looked like it vanished; it's actually
+    permanently recorded as a failure (tx <span style="font-family:var(--mono);font-size:13px">629bd479…2fc4e6</span>, evidence section below).</p>
+    <p><b>MetaMask</b> — cannot connect to TRON at all; TRON isn't an Ethereum-style network from MetaMask's point of view. Whatever account
+    you opened there had 0 ETH, so it said "insufficient funds". It never touched your TRON wallet. Ignore it entirely.</p>
+    <p><b>Independent proof</b> — we simulated transfers from your address of 10 USDT and of the full balance directly against the contract:
+    both return <span style="font-family:var(--mono)">"REVERT opcode executed"</span>. Ownership permissions on the account are intact and
+    still point solely to your own key (no multisig hijack, no permission theft) — the block is Tether's blacklist and nothing else.</p>
+  </div>
+</section>
+
+<section id="spam">
+  <h2>The spam tokens are bait <span class="tag redt">all scams · $0</span></h2>
+  <p class="lede">Within 12 minutes of the freeze, bots began airdropping tokens whose <em>names</em> are advertisements.
+  They're aimed at panicking owners of freshly frozen wallets. Every single one is worthless and the services they advertise are scams —
+  unfreezing is technically impossible for anyone except Tether.</p>
+  <div class="tblwrap"><table>
+    <thead><tr><th>Token name (as shown in wallet)</th><th>Amount airdropped</th><th>Landed</th><th>Real value</th></tr></thead>
+    <tbody>
+      <tr><td>UNFREEZE TG:UFT6699</td><td class="num">2,313,000</td><td class="num">6–7 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>TG:UFT6699 "UNFREEZE UNBANNED"</td><td class="num">1,223,999</td><td class="num">6 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>UNBANNED TG:UB321G</td><td class="num">88,729</td><td class="num">6 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>TG:UB321G "UNBANNED UNFREEZE"</td><td class="num">72,988</td><td class="num">6 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>FREEZE(TG:JF4888)</td><td class="num">4,888</td><td class="num">7 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>解冻TG:USDT660088 <span class="small">("unfreeze" in Chinese)</span></td><td class="num">888</td><td class="num">7 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>解封UNFREEZE · TG UJF999</td><td class="num">999</td><td class="num">7 Jul 2026</td><td class="num zero">$0.00</td></tr>
+      <tr><td>PANDA HASH @pd888, "buy gas" TG ip292, www 2008.dog</td><td class="num">1,183+</td><td class="num">Oct–Dec 2025</td><td class="num zero">$0.00</td></tr>
+      <tr><td>30 TRC-10 dust tokens (casino/gas-rental ads: Pay.bi, HX16.C0M, hash8net, tron.ink…)</td><td class="num">various</td><td class="num">2024–2026</td><td class="num zero">$0.00</td></tr>
+    </tbody>
+  </table></div>
+  <div class="card danger" style="margin-top:18px">
+    <h3>Why the "unfreeze services" are 100% scams</h3>
+    <p>The blacklist lives inside the USDT contract's code, and the only key that can call <span style="font-family:var(--mono)">removeBlackList</span>
+    is Tether's own multisig. A Telegram stranger has no path to it — mathematically none. Their business model: charge an upfront "fee"
+    (often in the thousands), sometimes harvest your seed phrase, then vanish. The FBI has issued warnings about exactly this airdropped-token freeze-scam pattern.
+    Your wallet history also contains <b>address-poisoning dust</b> — tiny transfers from lookalike addresses imitating your real counterparties —
+    so never copy an address out of your transaction history.</p>
+  </div>
+</section>
+
+<section id="actions">
+  <h2>What to do — and what never to do</h2>
+  <div class="dd">
+    <div class="card warn">
+      <h3 style="color:var(--amber)">Do now</h3>
+      <ul class="actions">
+        <li><b>Stop all incoming payments</b> to this address today. Everything that arrives gets frozen too ($276,600 was already caught).</li>
+        <li><b>Keep your seed phrase offline and secret.</b> If Tether ever unfreezes, whoever holds the key gets the $1.33M.</li>
+        <li><b>Engage a crypto-experienced lawyer</b> and contest through Tether's official channel: <a href="https://cs.tether.to" target="_blank" rel="noopener">cs.tether.to</a> (plus tether.to → Legal → law-enforcement requests).</li>
+        <li><b>Prepare source-of-funds proof</b>: KYC documents, invoices/agreements behind the big deposits, exchange statements, counterparty identities.</li>
+        <li><b>Find the case.</b> Freezes are usually LE-initiated; your lawyer should demand the requesting agency's identity from Tether — resolution runs through that agency, not Tether support.</li>
+        <li><b>Warn recent senders</b> (the ones who paid you 30 Jun – 7 Jul) that the wallet is frozen — before they send more.</li>
+      </ul>
+    </div>
+    <div class="card danger">
+      <h3 style="color:var(--red)">Never do</h3>
+      <ul class="actions">
+        <li>Pay any Telegram / website "unfreeze", "whitelist" or "recovery" service. All scams, no exceptions.</li>
+        <li>Type your seed phrase into any site, app, "checker", or support chat — including anything claiming to be Tether or TronLink.</li>
+        <li>Send more TRX/USDT into the wallet for "gas", "activation" or "verification" — classic follow-up scam.</li>
+        <li>Interact with, swap, or "sell" the spam tokens — their contracts are scammer-controlled bait.</li>
+        <li>Copy addresses from your transaction history (poisoned lookalikes are planted there).</li>
+        <li>Panic-import the wallet into random apps "to try". Every new app is a new place the key can leak.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="recovery">
+  <h2>Recovery — the honest picture</h2>
+  <p class="lede">No sugar-coating. The numbers below are from a full sweep of Tether's on-chain freeze history plus published research.</p>
+  <div class="stats">
+    <div class="stat"><div class="k">Addresses Tether froze in 2025</div><div class="v">4,163</div><div class="s">$1.26B in USDT (Ethereum + TRON)</div></div>
+    <div class="stat"><div class="k">Unfrozen the same year</div><div class="v amb">~3.6%</div><div class="s">150 addresses · median wait 18.2 days</div></div>
+    <div class="stat"><div class="k">Frozen USDT permanently burned</div><div class="v red">$698M</div><div class="s">via destroyBlackFunds in 2025</div></div>
+    <div class="stat"><div class="k">Your funds burned?</div><div class="v grn">No</div><div class="s">0 destroy events for this wallet — still intact</div></div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <h3>What this means for you</h3>
+    <p>Unfreezing happens, but rarely, and essentially only when the freeze basis is resolved — mistaken identity, the investigation clears the
+    owner, or the requesting agency closes the case. It is a legal process, not a technical one: identity + source-of-funds documentation through
+    a lawyer, aimed at Tether compliance and the agency behind the request. Speed matters for a second reason — Tether has burned frozen funds
+    of wallets judged to hold crime proceeds. Your balance is untouched today (verified: zero unfreeze events, zero destroy events for this
+    address in the contract's entire history), and the clock argues for acting through the formal channel quickly.</p>
+  </div>
+</section>
+
+<section id="evidence">
+  <h2>Evidence &amp; verification <span class="tag grn">all claims double-checked</span></h2>
+  <p class="lede">Every number on this page was derived from primary blockchain data (TronGrid / the USDT contract itself) and then re-verified
+  by two independent verification passes — one re-deriving all on-chain numbers from fresh API calls, one confirming background facts against
+  official sources. Zero mismatches.</p>
+
+  <div class="hashrow"><span class="lbl">Your wallet</span><code id="h3">TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo</code><button class="cbtn" data-copy="h3">Copy</button><a class="ext" href="https://tronscan.org/#/address/TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo" target="_blank" rel="noopener">Tronscan ↗</a></div>
+  <div class="hashrow"><span class="lbl">Freeze — queued</span><code id="h4">888f152d556cc5cf75aaad48a9591d8e6d428be324ff879962ed1c9ce24dd6ec</code><button class="cbtn" data-copy="h4">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/888f152d556cc5cf75aaad48a9591d8e6d428be324ff879962ed1c9ce24dd6ec" target="_blank" rel="noopener">Tronscan ↗</a></div>
+  <div class="hashrow"><span class="lbl">Freeze — executed</span><code id="h5">3916a7f895dfd9f0d0b05a84ce40e4950424edc54b0554c9542c6394d48feec4</code><button class="cbtn" data-copy="h5">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/3916a7f895dfd9f0d0b05a84ce40e4950424edc54b0554c9542c6394d48feec4" target="_blank" rel="noopener">Tronscan ↗</a></div>
+  <div class="hashrow"><span class="lbl">Your reverted test</span><code id="h6">629bd4796eb57ad97d9fa0db67433225d274227043d1ac1dd4d394bf342fc4e6</code><button class="cbtn" data-copy="h6">Copy</button><a class="ext" href="https://tronscan.org/#/transaction/629bd4796eb57ad97d9fa0db67433225d274227043d1ac1dd4d394bf342fc4e6" target="_blank" rel="noopener">Tronscan ↗</a></div>
+  <div class="hashrow"><span class="lbl">Genuine USDT contract</span><code id="h7">TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t</code><button class="cbtn" data-copy="h7">Copy</button><a class="ext" href="https://tronscan.org/#/contract/TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t" target="_blank" rel="noopener">Tronscan ↗</a></div>
+
+  <details><summary>Verified claims (10/10 confirmed) &amp; method</summary>
+    <div class="inner">
+      <ul class="actions" style="list-style:none">
+        <li>Balance: <b>1,334,619.952212 USDT</b> — confirmed two ways (contract <span style="font-family:var(--mono)">balanceOf</span> + full 533-transfer flow reconstruction; both match to the cent).</li>
+        <li><span style="font-family:var(--mono)">isBlackListed(wallet) = true</span> on the genuine USDT contract — confirmed by live call and by transfer simulation ("REVERT opcode executed").</li>
+        <li>Freeze event at block 84,225,442, 6 Jul 2026 13:56:54 UTC — confirmed from the transaction's event log (<span style="font-family:var(--mono)">AddedBlackList</span>, user = this wallet).</li>
+        <li>Full event-log sweep of the USDT contract: 932 unfreeze events and 1,109 fund-destruction events ever — none involve this wallet.</li>
+        <li>Account permissions: owner + active keys point only to the wallet's own key (threshold 1) — no hijack.</li>
+        <li>TRX balance 94.860634 (≈ $31.53 at $0.332391, CoinGecko) — confirmed.</li>
+        <li>All spam-token balances confirmed per-contract with on-chain <span style="font-family:var(--mono)">decimals()</span>.</li>
+      </ul>
+      <p class="small" style="margin-top:10px">Sources: Tether supported-protocols page (contract authenticity) · USDT-TRC20 verified source code on Tronscan (blacklist mechanics)
+      · Tether T3 Financial Crime Unit announcements ($450M+ frozen with law enforcement) · Tether Legal / law-enforcement-request policy (cs.tether.to channel)
+      · BlockSec 2025 blacklist study (4,163 frozen / 150 unfrozen / $698M burned) · FBI warning on airdropped freeze-scam tokens · CoinGecko (TRX price).</p>
+    </div>
+  </details>
+</section>
+
+<div class="footer">
+  <b>Report scope:</b> on-chain analysis of TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo only. Data pulled 7 July 2026 ≈17:20 UTC, TRON mainnet.
+  All timestamps UTC (IST = UTC+5:30). This page contains no private keys and grants no access to funds.
+  <div class="vline">verification: pass A (on-chain numbers, 10/10 confirmed) · pass B (facts &amp; sources, 7/7 confirmed) · zero mismatches</div>
+</div>
+
+</div>
+<script>
+(function(){
+  function fallbackCopy(text){
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function flash(btn,ok){
+    var old=btn.textContent;
+    btn.textContent = ok ? 'Copied ✓' : 'Select & copy';
+    btn.classList.add('done');
+    setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1600);
+  }
+  document.querySelectorAll('.cbtn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=document.getElementById(btn.getAttribute('data-copy'));
+      if(!el) return;
+      var text=el.textContent.trim();
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text).then(function(){flash(btn,true);},function(){flash(btn,fallbackCopy(text));});
+      }else{
+        flash(btn,fallbackCopy(text));
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
