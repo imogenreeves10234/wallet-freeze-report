@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Do This — Simple Steps to Contact Tether</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E14'/%3E%3Cg stroke='%237FD4FF' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='50' y1='18' x2='50' y2='82'/%3E%3Cline x1='22' y1='34' x2='78' y2='66'/%3E%3Cline x1='78' y1='34' x2='22' y2='66'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0A0E14; --panel:#111722; --panel2:#0D1320; --line:#1E2836;
+    --text:#E8EDF4; --muted:#8A97A8; --ice:#7FD4FF; --ice-dim:#3A6E8F;
+    --amber:#FFB454; --red:#FF7A7A; --green:#58D6A3;
+    --mono:ui-monospace,'SF Mono','Cascadia Mono','JetBrains Mono',Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  body{background:var(--ink);color:var(--text);font-family:var(--sans);line-height:1.6;font-size:17px;
+       background-image:radial-gradient(1100px 500px at 70% -10%, rgba(127,212,255,.05), transparent 60%)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px 90px}
+  a{color:var(--ice)}
+  button:focus-visible{outline:2px solid var(--ice);outline-offset:2px;border-radius:4px}
+
+  header{padding:56px 0 6px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;color:var(--muted);text-transform:uppercase}
+  h1{font-size:clamp(28px,6vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.12;margin:14px 0 10px}
+  h1 .ice{color:var(--ice)}
+  .intro{color:var(--muted);font-size:16px;max-width:60ch}
+  .backlink{display:inline-block;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--muted);text-decoration:none}
+  .backlink:hover{color:var(--ice)}
+
+  /* big step card */
+  .step{margin-top:26px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px 24px 22px;
+        position:relative}
+  .step .num{position:absolute;top:-16px;left:22px;width:38px;height:38px;border-radius:10px;display:grid;place-items:center;
+             font-family:var(--mono);font-weight:800;font-size:18px;color:var(--ink);background:var(--ice)}
+  .step h2{font-size:20px;font-weight:750;margin:6px 0 14px;letter-spacing:-.01em}
+  ol.dolist,ul.dolist{margin:0 0 0 2px;list-style:none;counter-reset:mini}
+  ol.dolist li,ul.dolist li{position:relative;padding:8px 0 8px 30px}
+  ol.dolist li::before{counter-increment:mini;content:counter(mini);position:absolute;left:0;top:8px;
+       font-family:var(--mono);font-size:12px;font-weight:700;color:var(--ice);
+       width:20px;height:20px;border:1px solid var(--ice-dim);border-radius:50%;display:grid;place-items:center}
+  ul.dolist li::before{content:"›";position:absolute;left:6px;top:8px;color:var(--ice-dim);font-weight:800}
+  .dolist b{color:var(--text)}
+
+  /* go-to link chip */
+  .goto{display:flex;align-items:center;gap:12px;background:var(--panel2);border:1px solid rgba(127,212,255,.35);
+        border-radius:11px;padding:12px 14px;margin:6px 0 14px;flex-wrap:wrap}
+  .goto .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice)}
+  .goto code{font-family:var(--mono);font-size:15px;color:var(--text);word-break:break-all;flex:1;min-width:160px}
+  .cbtn{font-family:var(--mono);font-size:12.5px;padding:7px 14px;border-radius:8px;border:1px solid var(--ice-dim);
+        background:transparent;color:var(--ice);cursor:pointer;white-space:nowrap}
+  .cbtn:hover{background:rgba(127,212,255,.1)}
+  .cbtn.done{border-color:var(--green);color:var(--green)}
+
+  /* copy-paste message box */
+  .msg{margin:6px 0 6px}
+  .msg .msghead{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap}
+  .msg .msghead .lbl{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--green)}
+  .msg pre{white-space:pre-wrap;word-break:break-word;background:var(--panel2);border:1px solid var(--line);
+           border-radius:12px;padding:16px 16px;font-family:var(--mono);font-size:14px;line-height:1.7;color:var(--text)}
+  .msg .fill{color:var(--amber);font-weight:700}
+  .note{font-size:14px;color:var(--muted);margin-top:6px}
+  .warn{margin-top:30px;background:linear-gradient(180deg,rgba(255,122,122,.09),var(--panel) 60%);
+        border:1px solid rgba(255,122,122,.45);border-radius:16px;padding:20px 22px}
+  .warn .khead{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--red);margin-bottom:10px}
+  .warn ul{list-style:none;margin-left:2px}
+  .warn li{position:relative;padding:6px 0 6px 26px}
+  .warn li::before{content:"✕";position:absolute;left:2px;top:6px;color:var(--red);font-weight:800}
+  .footer{margin-top:50px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="eyebrow">Simple do-this guide · frozen USDT wallet</div>
+  <h1>Do these <span class="ice">4 steps</span>, in order.</h1>
+  <p class="intro">The messages are already written for you. Just copy them, paste them where it says, and fill the
+  <span style="color:var(--amber)">orange</span> parts. Nothing here costs money.</p>
+</header>
+
+<!-- STEP 1 -->
+<div class="step">
+  <div class="num">1</div>
+  <h2>Get 2 things ready on your phone/computer</h2>
+  <ul class="dolist">
+    <li><b>A photo of your ID</b> — passport or Emirates ID.</li>
+    <li><b>Your trading proof</b> — screenshots or a downloaded statement from the exchange you use, plus your wallet
+    history. This shows the money came from trading. (Don't overthink it — whatever records you have.)</li>
+  </ul>
+  <p class="note">Keep both files handy. You'll attach them in Step 3.</p>
+</div>
+
+<!-- STEP 2 -->
+<div class="step">
+  <div class="num">2</div>
+  <h2>Prove the wallet is yours (2 minutes)</h2>
+  <div class="goto">
+    <span class="tag">Open this</span>
+    <code id="u1">https://tronscan.org/#/tools/verify-sign</code>
+    <button class="cbtn" data-copy="u1">Copy link</button>
+  </div>
+  <ul class="dolist">
+    <li>Make sure the <b>“Sign”</b> tab is selected (not “Verify”).</li>
+    <li>Click <b>Connect Wallet</b> → choose <b>TronLink</b> → approve the pop-up. Pick the frozen wallet.</li>
+    <li>Copy the message below and paste it into the <b>“Message”</b> box:</li>
+  </ul>
+  <div class="msg">
+    <div class="msghead"><span class="lbl">Paste this into the Message box</span>
+      <button class="cbtn" data-copy="m2">Copy message</button></div>
+    <pre id="m2">I am the owner of this TRON wallet TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo and I am requesting a review of the freeze on it. Date: [WRITE TODAY'S DATE]</pre>
+  </div>
+  <ul class="dolist">
+    <li>Click <b>Sign Message</b>, then approve it in TronLink.</li>
+    <li>It will show 3 lines — <b>Address, Message, and Signature</b>. Copy all 3 and save them (you'll paste them in Step 3).</li>
+  </ul>
+  <p class="note">This is safe: it moves no money and never asks for your secret 12/24-word phrase. If any box asks for that phrase, stop — it's fake.</p>
+</div>
+
+<!-- STEP 3 -->
+<div class="step">
+  <div class="num">3</div>
+  <h2>Send the message to Tether</h2>
+  <div class="goto">
+    <span class="tag">Open this</span>
+    <code id="u2">https://cs.tether.to</code>
+    <button class="cbtn" data-copy="u2">Copy link</button>
+  </div>
+  <ul class="dolist">
+    <li>Click to <b>submit a new request / open a ticket</b> (about a frozen or blacklisted wallet).</li>
+    <li>Copy the message below, paste it in, and fill the <span style="color:var(--amber)">orange</span> parts:</li>
+  </ul>
+  <div class="msg">
+    <div class="msghead"><span class="lbl">Paste this as your message</span>
+      <button class="cbtn" data-copy="m1">Copy message</button></div>
+<pre id="m1">Hello Tether Support Team,
+
+My USDT wallet on the TRON network has been frozen / blacklisted. The money in it is from my normal cryptocurrency trading, and I would like to request a review.
+
+Wallet address: TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo
+Amount frozen: 1,334,619.95 USDT
+Date frozen: 6 July 2026
+
+I am the owner of this wallet and I can prove it — I have signed a message from the address (address, message and signature are below/attached). I received these funds through legitimate crypto trading and arbitrage, not from any illegal activity. I have attached my photo ID and my trading records showing where the funds came from.
+
+Please tell me what you need to review and lift the freeze, and which authority requested it so I can send any documents required.
+
+Full name: [WRITE YOUR FULL NAME]
+Email: [WRITE YOUR EMAIL]
+
+Thank you.</pre>
+  </div>
+  <ul class="dolist">
+    <li><b>Attach these 3 things</b> to the ticket:
+      <br>• your <b>photo ID</b> (from Step 1)
+      <br>• your <b>trading records</b> (from Step 1)
+      <br>• the <b>Address + Message + Signature</b> (from Step 2)</li>
+    <li>Click <b>Send</b>. Done.</li>
+  </ul>
+</div>
+
+<!-- STEP 4 -->
+<div class="step">
+  <div class="num">4</div>
+  <h2>After you send it</h2>
+  <ul class="dolist">
+    <li><b>Wait for their reply.</b> It can take a while — that's normal.</li>
+    <li>If they ask for more, reply with whatever they request.</li>
+    <li>Keep the wallet as it is. Don't connect it to any other website.</li>
+  </ul>
+</div>
+
+<div class="warn">
+  <div class="khead">The only rule that protects your money</div>
+  <ul>
+    <li>Never pay anyone to “unfreeze” the wallet — Tether never charges a fee, and no one else can do it. Every such offer is a scam.</li>
+    <li>Never share your secret 12/24-word phrase with anyone, ever.</li>
+    <li>Ignore the “UNFREEZE TG:…” tokens sitting in the wallet — they are the scam. Don't click them.</li>
+  </ul>
+</div>
+
+<div class="footer">
+  Wallet: TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo · 1,334,619.95 USDT, frozen 6 July 2026 (still frozen, still there).
+  These details are already filled into the message for you.
+  <br><a class="backlink" href="./recovery.html" style="margin-top:10px">Need the full plan (lawyer, deadlines, Dubai)? Read the detailed guide →</a>
+</div>
+
+</div>
+<script>
+(function(){
+  function fallbackCopy(text){
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function flash(btn,ok){
+    var old=btn.textContent;
+    btn.textContent = ok ? 'Copied ✓' : 'Select & copy';
+    btn.classList.add('done');
+    setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1600);
+  }
+  document.querySelectorAll('.cbtn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=document.getElementById(btn.getAttribute('data-copy'));
+      if(!el) return;
+      var text=el.textContent.trim();
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text).then(function(){flash(btn,true);},function(){flash(btn,fallbackCopy(text));});
+      }else{
+        flash(btn,fallbackCopy(text));
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
