@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>How to Fight for Your Frozen USDT — Plain-English Plan</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0E14'/%3E%3Cg stroke='%237FD4FF' stroke-width='6' stroke-linecap='round'%3E%3Cline x1='50' y1='18' x2='50' y2='82'/%3E%3Cline x1='22' y1='34' x2='78' y2='66'/%3E%3Cline x1='78' y1='34' x2='22' y2='66'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root{
+    --ink:#0A0E14; --panel:#111722; --panel2:#0D1320; --line:#1E2836;
+    --text:#E8EDF4; --muted:#8A97A8; --ice:#7FD4FF; --ice-dim:#3A6E8F;
+    --amber:#FFB454; --red:#FF7A7A; --green:#58D6A3;
+    --mono:ui-monospace,'SF Mono','Cascadia Mono','JetBrains Mono',Menlo,Consolas,monospace;
+    --sans:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{background:var(--ink);color:var(--text);font-family:var(--sans);line-height:1.68;font-size:16.5px;
+       background-image:radial-gradient(1100px 500px at 70% -10%, rgba(127,212,255,.05), transparent 60%)}
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px 90px}
+  a{color:var(--ice);text-decoration:none;border-bottom:1px solid rgba(127,212,255,.25)}
+  a:hover{border-bottom-color:var(--ice)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--ice);outline-offset:2px;border-radius:4px}
+
+  .backlink{display:inline-block;margin-top:26px;font-family:var(--mono);font-size:12.5px;color:var(--muted);border:none}
+  .backlink:hover{color:var(--ice)}
+  header{padding:20px 0 8px}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase}
+  h1{font-size:clamp(27px,5.2vw,42px);font-weight:800;letter-spacing:-.02em;line-height:1.14;margin:14px 0 6px}
+  h1 .ice{color:var(--ice)}
+  .subject{font-family:var(--mono);font-size:13px;color:var(--muted);margin-top:10px;word-break:break-all}
+  .verdict{margin-top:22px;padding:22px 24px;background:linear-gradient(180deg,rgba(127,212,255,.09),rgba(127,212,255,.03));
+           border:1px solid rgba(127,212,255,.3);border-radius:14px;font-size:17px}
+  .verdict strong{color:var(--ice)}
+  .verdict p+p{margin-top:12px}
+
+  nav{display:flex;flex-wrap:wrap;gap:8px;margin:30px 0 10px}
+  nav a{font-family:var(--mono);font-size:12.5px;padding:7px 13px;border:1px solid var(--line);border-radius:999px;
+        color:var(--muted);background:var(--panel2)}
+  nav a:hover{color:var(--ice);border-color:var(--ice-dim)}
+
+  section{margin-top:56px}
+  h2{font-size:clamp(21px,3.4vw,27px);font-weight:750;letter-spacing:-.015em;margin-bottom:6px}
+  h2 .n{font-family:var(--mono);color:var(--ice-dim);font-weight:700;margin-right:10px}
+  .lede{color:var(--muted);margin-bottom:22px;max-width:68ch}
+  p+p{margin-top:12px}
+  h3{font-size:17px;font-weight:700;margin:22px 0 6px}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:18px}
+  .card.icey{border-color:rgba(127,212,255,.35);background:linear-gradient(180deg,rgba(127,212,255,.07),var(--panel) 55%)}
+  .card.warn{border-color:rgba(255,180,84,.42);background:linear-gradient(180deg,rgba(255,180,84,.06),var(--panel) 60%)}
+  .card.danger{border-color:rgba(255,122,122,.45);background:linear-gradient(180deg,rgba(255,122,122,.07),var(--panel) 60%)}
+  .card.grn{border-color:rgba(88,214,163,.4);background:linear-gradient(180deg,rgba(88,214,163,.06),var(--panel) 60%)}
+  .card h3{margin-top:0}
+  .card .khead{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:10px}
+  .card.warn .khead{color:var(--amber)} .card.danger .khead{color:var(--red)}
+  .card.icey .khead{color:var(--ice)} .card.grn .khead{color:var(--green)}
+
+  /* fork cards */
+  .fork{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  @media(max-width:620px){.fork{grid-template-columns:1fr}}
+  .fk{border:1px solid var(--line);border-radius:14px;padding:20px 20px}
+  .fk.a{border-color:rgba(88,214,163,.4)} .fk.b{border-color:rgba(255,122,122,.42)}
+  .fk .lbl{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase}
+  .fk.a .lbl{color:var(--green)} .fk.b .lbl{color:var(--red)}
+  .fk h4{font-size:16px;margin:8px 0 8px}
+
+  /* steps */
+  .step{display:flex;gap:18px;margin-top:16px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .step .num{flex:0 0 auto;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+             font-family:var(--mono);font-weight:800;font-size:19px;color:var(--ice);
+             background:rgba(127,212,255,.1);border:1px solid rgba(127,212,255,.35)}
+  .step .body{flex:1;min-width:0}
+  .step .body h3{margin:2px 0 6px;font-size:17.5px}
+  .step .tagline{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .step ul{margin:8px 0 0 2px;list-style:none}
+  .step ul li{position:relative;padding:5px 0 5px 22px}
+  .step ul li::before{content:"›";position:absolute;left:2px;top:5px;color:var(--ice-dim);font-weight:700}
+  .who{margin-top:10px;font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px}
+  .who b{color:var(--text)}
+
+  /* checklist */
+  .checklist{list-style:none;margin-top:14px}
+  .checklist li{position:relative;padding:10px 0 10px 34px;border-bottom:1px dashed var(--line)}
+  .checklist li:last-child{border-bottom:none}
+  .checklist li::before{content:"";position:absolute;left:0;top:12px;width:18px;height:18px;border-radius:5px;
+                        border:2px solid var(--ice-dim);background:var(--panel2)}
+  .checklist li b{color:var(--text)}
+  .checklist li .prov{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+  .grouphead{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ice);
+             margin:22px 0 2px}
+
+  /* scorecard */
+  .tblwrap{overflow-x:auto;margin-top:16px;border:1px solid var(--line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+  th{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+     text-align:left;padding:12px 14px;background:var(--panel2);border-bottom:1px solid var(--line)}
+  td{padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .yes{color:var(--green);font-weight:700} .no{color:var(--red);font-weight:700} .part{color:var(--amber);font-weight:700}
+
+  /* stats */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:20px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px 14px}
+  .stat .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .stat .v{font-family:var(--mono);font-size:clamp(19px,2.6vw,25px);font-weight:700;margin-top:6px}
+  .stat .s{font-size:12px;color:var(--muted);margin-top:3px}
+  .v.ice{color:var(--ice)} .v.red{color:var(--red)} .v.grn{color:var(--green)} .v.amb{color:var(--amber)}
+
+  /* hash / contact rows with copy */
+  .hashrow{display:flex;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);
+           border-radius:10px;padding:11px 12px;margin-top:10px;flex-wrap:wrap}
+  .hashrow .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:130px}
+  .hashrow code{font-family:var(--mono);font-size:13px;color:var(--text);word-break:break-all;flex:1;min-width:180px}
+  .cbtn{font-family:var(--mono);font-size:12px;padding:6px 13px;border-radius:7px;border:1px solid var(--ice-dim);
+        background:transparent;color:var(--ice);cursor:pointer;white-space:nowrap}
+  .cbtn:hover{background:rgba(127,212,255,.1)}
+  .cbtn.done{border-color:var(--green);color:var(--green)}
+
+  ul.plain{margin:10px 0 0 2px;list-style:none}
+  ul.plain li{position:relative;padding:6px 0 6px 24px}
+  ul.plain li::before{content:"›";position:absolute;left:2px;top:6px;color:var(--ice-dim);font-weight:700}
+  ul.dont li::before{content:"✕";color:var(--red);font-weight:700;top:7px}
+  ul.do li::before{content:"✓";color:var(--green);font-weight:700;top:7px}
+  .callout{margin-top:16px;padding:14px 18px;border-left:3px solid var(--ice-dim);background:var(--panel2);border-radius:0 10px 10px 0}
+  .big-no{font-size:18px;font-weight:800;color:var(--red)}
+  .small{font-size:13px;color:var(--muted)}
+  strong.hl{color:var(--ice)}
+  .pill{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+        padding:3px 8px;border-radius:5px;vertical-align:2px;margin-left:6px}
+  .pill.verified{background:rgba(88,214,163,.14);color:var(--green)}
+  .pill.unconf{background:rgba(255,180,84,.14);color:var(--amber)}
+
+  .footer{margin-top:70px;padding-top:22px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+  .footer .vline{font-family:var(--mono);font-size:12px;margin-top:8px}
+  details{margin-top:14px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+  summary{cursor:pointer;padding:12px 16px;font-weight:600;font-size:14px;color:var(--muted)}
+  details[open] summary{border-bottom:1px solid var(--line);color:var(--text)}
+  details .inner{padding:10px 16px 14px;font-size:14px}
+  details .inner a{font-size:13px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <a class="backlink" href="./index.html">← back to the forensic report (what happened)</a>
+  <div class="eyebrow" style="margin-top:24px">Recovery plan · plain English · written for a non-crypto reader · 8 July 2026</div>
+  <h1>How to fight for your money —<br><span class="ice">step by step, from zero</span>.</h1>
+  <div class="subject">Frozen wallet: TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo · 1,334,619.95 USDT</div>
+  <div class="verdict">
+    <p><strong>Read this in one breath first.</strong> Your money was not stolen and it is still sitting in your wallet.
+    It was <em>frozen</em> by Tether (the company that makes USDT) because some money that flowed into your wallet was
+    being investigated. Getting it back is not a computer trick — it is a <strong>paperwork-and-legal job</strong>: prove
+    the money is honestly yours, find out who asked for the freeze, and get that authority (or a court) to tell Tether to
+    release it.</p>
+    <p>This page is your full plan. It is long on purpose — you asked for every stone turned. But every part is written in
+    plain words, in the order you should do it. Take it one step at a time. <strong>You do not have to understand crypto to
+    do this — you mostly have to gather documents and hire the right person.</strong></p>
+  </div>
+</header>
+
+<nav aria-label="Sections">
+  <a href="#truth">The 3 hard truths</a>
+  <a href="#odds">Honest odds</a>
+  <a href="#twowallets">The 2 wallets</a>
+  <a href="#plan">Your 8-step plan</a>
+  <a href="#docs">Documents checklist</a>
+  <a href="#ownwallet">Prove the wallet is yours</a>
+  <a href="#verify">Checks you'll face</a>
+  <a href="#dubai">The Dubai angle</a>
+  <a href="#scams">The second trap: scams</a>
+  <a href="#never">Never do this</a>
+  <a href="#cash">Your cashflow</a>
+  <a href="#contacts">Who to contact</a>
+</nav>
+
+<!-- ===================== TRUTHS ===================== -->
+<section id="truth">
+  <h2>Start here: the 3 hard truths</h2>
+  <p class="lede">If you understand only these three things, you will not waste money or get scammed. Everything else is detail.</p>
+
+  <div class="card icey">
+    <div class="khead">Truth 1 · Only Tether can unfreeze it — and only when told to by law enforcement or a court</div>
+    <p>The freeze is a switch inside Tether's own software. Only Tether can flip it. No wallet app, no exchange, no
+    "recovery expert", and no police officer can flip it directly. And Tether will <strong>not</strong> flip it back just
+    because you ask nicely — it lifts a freeze only when the authority that requested it agrees, or a court orders it.
+    So your real target is not Tether's phone line. It is <strong>whoever asked for the freeze.</strong></p>
+  </div>
+
+  <div class="card warn">
+    <div class="khead">Truth 2 · Everything depends on WHY it was frozen — and we don't fully know yet</div>
+    <p>There are two very different situations. Finding out which one you are in is literally step one, because your odds
+    and your plan change completely.</p>
+    <div class="fork">
+      <div class="fk a">
+        <div class="lbl">Situation A — the workable one</div>
+        <h4>An ordinary fraud / police investigation</h4>
+        <p class="small">The money was linked to a scam or theft and an agency asked for a hold. Slow, but there is a
+        real, proven path for an honest receiver to get funds back.</p>
+      </div>
+      <div class="fk b">
+        <div class="lbl">Situation B — the hard one</div>
+        <h4>A sanctions case (e.g. North-Korea / "Lazarus" / Bybit-hack money)</h4>
+        <p class="small">If the funds trace to a government-sanctioned group, Tether is legally <em>forbidden</em> to
+        unfreeze, and recovery is very rare and very slow. Be honest with yourself about this.</p>
+      </div>
+    </div>
+    <p style="margin-top:16px"><strong>Important and new:</strong> yesterday it looked like the two wallets that paid you
+    might be tagged "Bybit hacker". When we independently re-checked today, that label could <em>not</em> be confirmed on
+    those two wallets themselves — the risk tags actually sit on <em>their</em> trading partners, and the exact per-wallet
+    label is locked behind a paid data service. <strong>So we do not actually know yet whether this is Situation A or B.</strong>
+    Establishing that is the first job for your lawyer.</p>
+  </div>
+
+  <div class="card danger">
+    <div class="khead">Truth 3 · Every "pay us and we'll unfreeze it" offer is a scam — 100% of them</div>
+    <p>The "UNFREEZE TG:…" tokens that keep landing in your wallet are <strong>the scam itself</strong>, fishing for you.
+    Tether never charges a fee to unfreeze. Nobody on Telegram or WhatsApp can unfreeze anything. If you remember one
+    sentence from this whole page, make it this one:</p>
+    <p class="big-no" style="margin-top:12px">No real person, agency, or service will ever ask you to pay or send crypto to "unlock" your money.</p>
+  </div>
+</section>
+
+<!-- ===================== ODDS ===================== -->
+<section id="odds">
+  <h2>The honest odds (so you can plan your life)</h2>
+  <p class="lede">You deserve the real numbers, not false hope. These are from independent 2025 blockchain data, verified for this report.</p>
+  <div class="stats">
+    <div class="stat"><div class="k">Frozen wallets in 2025</div><div class="v ice">4,163</div><div class="s">≈ $1.26 billion total</div></div>
+    <div class="stat"><div class="k">Later un-frozen</div><div class="v amb">3.6%</div><div class="s">only 150 of 4,163 that year</div></div>
+    <div class="stat"><div class="k">Permanently destroyed</div><div class="v red">55.6%</div><div class="s">≈ $698M burned for good</div></div>
+    <div class="stat"><div class="k">When it works, it takes</div><div class="v grn">Months–years</div><div class="s">18-day median only for the lucky few</div></div>
+  </div>
+  <div class="callout">
+    <p>Two takeaways. <strong>One:</strong> most frozen wallets are <em>not</em> returned, so treat this money as
+    unavailable for a long time when you plan your business — do not promise clients dates based on it. <strong>Two:</strong>
+    frozen funds can be <em>permanently destroyed</em> ("burned") while a case sits idle. That is why <strong class="hl">acting
+    quickly matters</strong> — right now your USDT is only frozen (still there, still recoverable), not burned. We confirmed
+    that today.</p>
+  </div>
+  <p style="margin-top:14px">Honest recoveries do happen — but almost always for the original <em>victim</em> of a fraud,
+  through a court process, not for a receiver who has to prove innocence. That is the fight ahead: proving you took the
+  money honestly, for real business, without knowing anything was wrong. The rest of this page arms you for exactly that.</p>
+</section>
+
+<!-- ===================== TWO WALLETS ===================== -->
+<section id="twowallets">
+  <h2>Your question: the 2 wallets blamed for this <span class="pill verified">on-chain verified today</span></h2>
+  <p class="lede">You asked whether the two wallets that sent you the suspicious payments are still in the same state.
+  Here is exactly what they are doing today — every number below was independently re-checked against the blockchain.</p>
+
+  <div class="tblwrap"><table>
+    <thead><tr><th>Wallet that paid you</th><th>Frozen?</th><th>Holds now</th><th>What it did</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><b>TMnpHKb…v6QVV</b><br><span class="small">sent you 100,000 on 2 Jul</span></td>
+        <td class="no">No — still free</td>
+        <td class="num">≈ 11,292 USDT</td>
+        <td><b>Still active.</b> Ran 125,000 in and 124,604 out on 7 Jul — the day <em>after</em> your freeze.</td>
+      </tr>
+      <tr>
+        <td><b>TD94xiX…UJu1i</b><br><span class="small">sent you 100,000 on 30 Jun</span></td>
+        <td class="no">No — still free</td>
+        <td class="num">≈ 3,982 USDT</td>
+        <td><b>Emptied itself.</b> Pushed out 250k, 160k, 40k, 50k on 2–3 Jul, then went quiet.</td>
+      </tr>
+    </tbody>
+  </table></div>
+
+  <div class="card">
+    <h3>What this means for you — in plain words</h3>
+    <p>Both wallets that sent you the flagged money are <strong>still free and have already moved their money out.</strong>
+    Only <em>your</em> wallet — the one that held still — got frozen. This is the unfair but normal pattern: freezes tend to
+    land on the wallet that is sitting full of money (the "endpoint"), not on the ones that keep moving.</p>
+    <p>The useful part: this is <strong>evidence in your favour.</strong> It shows you were the quiet receiver at the end,
+    not someone shuffling money around to hide it. Your lawyer can use that.</p>
+    <p class="small" style="margin-top:12px"><b>One honesty note:</b> the "Bybit hacker" label we mentioned yesterday could
+    not be confirmed on these two wallets today (it sits on <em>their</em> partners; the exact per-wallet label needs a paid
+    service). So do not state as fact that this is North-Korea money — it may or may not be. Your lawyer must establish it.</p>
+  </div>
+</section>
+
+<!-- ===================== 8 STEP PLAN ===================== -->
+<section id="plan">
+  <h2>Your plan: 8 steps, in order, from zero</h2>
+  <p class="lede">Do them in this order. Steps 1–2 are free and you do them today. Steps 3–8 are done <em>with</em> a lawyer.
+  Do not skip ahead to contacting Tether or the police on your own — say the wrong thing and you can make it worse.</p>
+
+  <div class="step">
+    <div class="num">1</div>
+    <div class="body">
+      <div class="tagline">Today · free · do no harm</div>
+      <h3>Freeze the damage — protect yourself first</h3>
+      <ul>
+        <li>Do <b>not</b> pay anyone to "unfreeze" it. Do not send crypto to any "agent", "officer" or "service".</li>
+        <li>Do <b>not</b> click, claim, sell, or interact with the "UNFREEZE / FREEZE" tokens in your wallet. Leave them alone.</li>
+        <li>Do <b>not</b> type your secret recovery phrase (the 12/24 words) into any website, ever, for any reason.</li>
+        <li>Stop sending any more money <em>into</em> this wallet. Use a different wallet for normal business.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">2</div>
+    <div class="body">
+      <div class="tagline">Today · free · save the proof</div>
+      <h3>Preserve everything, before anything changes</h3>
+      <ul>
+        <li>Keep this forensic report (the freeze time, the exact transactions). It is already saved for you.</li>
+        <li>Save screenshots of your wallet balance and the failed send attempt.</li>
+        <li>Gather, in one folder, every record of the payments that came in — who paid, when, how much, and <em>why</em>
+        (the invoice, order, or deal behind each one). This becomes your evidence file in Step 6.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">3</div>
+    <div class="body">
+      <div class="tagline">Week 1 · with a lawyer · the key question</div>
+      <h3>Find out WHO froze it and WHY (Situation A or B?)</h3>
+      <ul>
+        <li>Your lawyer asks Tether (the proper channel is <b>inforequests@tether.to</b>, lawyer-to-company) who requested
+        the freeze. Tether usually points you to the investigating agency rather than naming it publicly.</li>
+        <li>Your lawyer also checks public court/seizure records (like the US site <b>forfeiture.gov</b>) to see if a case
+        already names your wallet, and gets a proper blockchain-tracing report on where the incoming money really came from.</li>
+        <li><b>The goal of this step:</b> learn whether this is an ordinary fraud case (workable) or a sanctions case (very
+        hard). Your whole strategy depends on the answer.</li>
+      </ul>
+      <div class="who"><b>Why with a lawyer:</b> anything you say to Tether or an agency directly can be used against you.
+      Let counsel speak for you from the start.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">4</div>
+    <div class="body">
+      <div class="tagline">Week 1–2 · the most important hire</div>
+      <h3>Hire the RIGHT lawyer (and avoid the fake ones)</h3>
+      <ul>
+        <li><b>Which type:</b> a crypto asset-recovery / asset-forfeiture lawyer. If it turns out to be a sanctions case,
+        you need one who also handles <b>OFAC / US sanctions</b>. Because the freeze is likely US-driven, you will probably
+        need <b>US counsel</b>, often alongside a <b>Dubai</b> firm (see the Dubai section).</li>
+        <li><b>How to vet them:</b> confirm a real, checkable bar/licence number, a real office and phone, and insist on a
+        video call. Get an honest written assessment of your odds — not a promise.</li>
+        <li><b>Cost, roughly:</b> good lawyers charge about $250–$1,000+ per hour; retainers $2,000–$10,000+; a full
+        cross-border fight is realistically a five-to-six-figure spend. That is the real cost of a serious try at $1.3M.</li>
+        <li><b>Walk away instantly</b> if they "guarantee" recovery, want a big upfront fee paid to a third party, or will
+        only talk on Telegram/WhatsApp. Real firms don't do that.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">5</div>
+    <div class="body">
+      <div class="tagline">Week 2 · easy · proves the wallet is yours</div>
+      <h3>Prove you own the wallet (a 2-minute signature)</h3>
+      <ul>
+        <li>You'll be asked to prove the wallet is really yours. The clean way is to "sign a message" — like a tamper-proof
+        digital autograph. It moves no money, costs nothing, and reveals no secret. Full simple steps are in the
+        <a href="#ownwallet">"Prove the wallet is yours"</a> section below.</li>
+        <li>This is stronger than a screenshot (screenshots can be faked), so it builds trust with the agency and Tether.</li>
+      </ul>
+      <div class="who"><b>Safety:</b> only ever sign inside your real wallet app (TronLink / Ledger). Never on a random
+      "unfreeze" or "validate" website — those drain wallets.</div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">6</div>
+    <div class="body">
+      <div class="tagline">Weeks 2–4 · the paperwork that wins</div>
+      <h3>Build your "where the money came from" file</h3>
+      <ul>
+        <li>This is the heart of your case: documents proving the money is honest business income. The full list is in the
+        <a href="#docs">Documents checklist</a> below — company papers, accounts, tax filings, invoices, contracts, bank and
+        exchange statements, and records of who paid you and why.</li>
+        <li>Organise it clearly: a short cover letter telling your story, a timeline, a table of every flagged payment, then
+        the documents as numbered exhibits. Neat and consistent wins.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">7</div>
+    <div class="body">
+      <div class="tagline">Weeks 2–4 · your legal shield</div>
+      <h3>Build your "I took it in good faith" defence</h3>
+      <ul>
+        <li>The law protects an "innocent receiver" — someone who took money in good faith, gave real value in return (goods,
+        services, or currency), and had no reason to suspect anything was wrong. This defence exists in US law, UAE law, and
+        Dubai/English courts, and has been used specifically for USDT.</li>
+        <li>Collect what proves it: records that you delivered goods/services or paid fair value, that prices were normal, any
+        checks you did on the people who paid you, and your negotiation/chat history.</li>
+        <li>There's a second helpful rule ("change of position"): because you have <em>already committed this money to your
+        own clients</em>, the law can reduce what you'd ever have to give back. Tell your lawyer about every client obligation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="num">8</div>
+    <div class="body">
+      <div class="tagline">On a deadline · don't miss it</div>
+      <h3>File the formal claim — on time</h3>
+      <ul>
+        <li>If a US seizure case is opened on your wallet, there is a <b>hard deadline</b> (often around 30–35 days from the
+        official notice) to file a "claim" as an innocent owner. Miss it and you can lose the money by default. Your lawyer
+        runs this clock.</li>
+        <li>Depending on the case, the routes are: an innocent-owner claim in the forfeiture case; a "remission" request to
+        return funds to you; or, for a sanctions case, an OFAC licence/de-listing petition (slow and rarely granted).</li>
+        <li>In parallel, your Dubai lawyer can build a local ownership record and chase the counterparties (see Dubai section).</li>
+      </ul>
+      <div class="who"><b>Golden rule:</b> act while the money is still frozen. Once a court starts deciding who gets it, your
+      chance to speak up shrinks. Speed = leverage.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DOCS ===================== -->
+<section id="docs">
+  <h2>The complete documents checklist</h2>
+  <p class="lede">This is everything you may be asked for, grouped so it's not overwhelming. You will not need every single
+  item — gather what you have, and where a document never existed, write a short dated note explaining why. Tick them off as
+  you go.</p>
+
+  <div class="grouphead">A · Proof the money is honest (where it came from)</div>
+  <ul class="checklist">
+    <li><b>Company registration / incorporation certificate</b><span class="prov">Proves your business is a real, legal company.</span></li>
+    <li><b>Trade licence / business licence</b><span class="prov">Proves you're allowed to run this business (in Dubai, your DED or free-zone licence).</span></li>
+    <li><b>Owner/shareholder register (who owns the company)</b><span class="prov">Proves you personally own and control the business and its profits.</span></li>
+    <li><b>Audited financial statements — last 2–3 years</b><span class="prov">The single strongest document: shows your business really earns money at this scale.</span></li>
+    <li><b>Tax and VAT filings / tax-residency certificate</b><span class="prov">Shows the income was declared and matches your wealth.</span></li>
+    <li><b>Business bank statements</b><span class="prov">Shows the money genuinely flowed through your accounts.</span></li>
+    <li><b>Sales invoices + contracts / purchase orders</b><span class="prov">Shows real customers were billed for real goods or services.</span></li>
+    <li><b>Delivery notes / shipping documents</b><span class="prov">Shows the goods or services were actually delivered — kills "fake invoice" suspicion.</span></li>
+  </ul>
+
+  <div class="grouphead">B · Proof the wallet is yours &amp; the money arrived</div>
+  <ul class="checklist">
+    <li><b>A signed message from the frozen wallet</b><span class="prov">The digital autograph proving you control it (Step 5 / section below).</span></li>
+    <li><b>Full transaction history export (TronScan CSV)</b><span class="prov">The permanent public record of every payment in and out.</span></li>
+    <li><b>Exchange account statement in your name (KYC)</b><span class="prov">Links your verified identity to this wallet via deposits/withdrawals.</span></li>
+  </ul>
+
+  <div class="grouphead">C · Proof you dealt honestly with whoever paid you</div>
+  <ul class="checklist">
+    <li><b>ID or company papers of each person/business who paid you</b><span class="prov">Turns "a stranger paid me" into a documented, checked counterparty.</span></li>
+    <li><b>Deal tickets / trade confirmations (amount, price, date)</b><span class="prov">Shows each payment was a real, arm's-length transaction.</span></li>
+    <li><b>Chat / negotiation records (WhatsApp, Telegram, email)</b><span class="prov">Shows the genuine back-and-forth behind each deal — export and keep them.</span></li>
+    <li><b>A market-price reference for each deal</b><span class="prov">Proves you charged/paid a fair, normal price (a suspiciously cheap deal looks bad).</span></li>
+    <li><b>A wallet-risk ("KYT") report on the addresses that paid you</b><span class="prov">Your lawyer or a forensics firm orders this; shows the address looked clean when you dealt.</span></li>
+  </ul>
+
+  <div class="grouphead">D · Your own identity papers</div>
+  <ul class="checklist">
+    <li><b>Passport / national ID + Emirates ID</b><span class="prov">Standard identity check.</span></li>
+    <li><b>Proof of address (utility bill / bank letter / tenancy)</b><span class="prov">Confirms where you live.</span></li>
+    <li><b>Be ready for a live "selfie / video" check and extra questions</b><span class="prov">A big one-off amount always triggers deeper "enhanced" checks — this is normal, not an accusation.</span></li>
+  </ul>
+
+  <div class="card grn" style="margin-top:24px">
+    <div class="khead">How to hand it over</div>
+    <p>Put it together in this order so a busy lawyer or official can follow it in five minutes: <b>(1)</b> a one-page cover
+    letter telling your story in plain words → <b>(2)</b> a contents list → <b>(3)</b> a timeline of the flagged payments →
+    <b>(4)</b> a simple table (date, amount, who paid, why, what you gave in return) → <b>(5)</b> the documents above as
+    numbered exhibits. Respond fast when asked — delays themselves look suspicious.</p>
+  </div>
+</section>
+
+<!-- ===================== OWN WALLET ===================== -->
+<section id="ownwallet">
+  <h2>Prove the wallet is yours — the signing step, simply</h2>
+  <p class="lede">"Signing a message" sounds technical but it's a 2-minute job. It's like signing your name in a way that can't
+  be forged or copied — it proves you hold the wallet, without moving money or exposing any secret.</p>
+
+  <div class="card">
+    <h3>Do this (only inside your real wallet app)</h3>
+    <ul class="plain do">
+      <li>Open the official TRON explorer <b>tronscan.org</b> and find the <b>"Sign &amp; Verify Message"</b> tool.</li>
+      <li>Connect your wallet (TronLink app or Ledger) and make sure the frozen address is the one selected.</li>
+      <li>In the message box, type the exact words your lawyer/the investigator gives you — for example:
+      <em>"I own address TFBqWs… — case ____ — 8 July 2026"</em>.</li>
+      <li>Click <b>Sign Message</b> and approve it in your wallet (on a Ledger, check the text on the device screen first).</li>
+      <li>Copy the three things it gives you — <b>your address, the exact message, and the signature</b> — and send all three.
+      The other side pastes them into the same tool to confirm it's genuinely you.</li>
+    </ul>
+  </div>
+  <div class="card danger">
+    <div class="khead">The one rule that protects you</div>
+    <p>Only ever sign inside your genuine wallet app. <strong>Never</strong> sign, "validate", "sync", or connect your wallet
+    on a website that promises to unfreeze or check your funds — those are traps that empty your wallet the instant you
+    approve. And <strong>never</strong> type your 12/24-word secret phrase anywhere. A real signing step never asks for it.</p>
+  </div>
+</section>
+
+<!-- ===================== VERIFY ===================== -->
+<section id="verify">
+  <h2>The checks you will personally go through</h2>
+  <p class="lede">So nothing surprises you — here is what "verification" means in practice. None of it means you're accused;
+  a large one-off amount simply triggers the deepest level of routine checks.</p>
+  <ul class="plain">
+    <li><b>Identity check:</b> passport/Emirates ID plus proof of address.</li>
+    <li><b>Liveness check:</b> a selfie or short video to prove it's really you.</li>
+    <li><b>Wallet-ownership check:</b> the signed message from the section above.</li>
+    <li><b>Enhanced due diligence (EDD):</b> because the amount is large and one-off, expect deeper questions and a demand to
+    <em>prove</em> — with documents, not just your word — both how you built your wealth and where this specific money came
+    from. This is the standard high-value process; answer fully and quickly.</li>
+    <li><b>Source-of-funds review:</b> they check that your documents are <em>consistent</em> — that the story, the invoices,
+    the tax filings and the amounts all match. Gaps are what raise flags, so close them in advance with a short explanation.</li>
+  </ul>
+</section>
+
+<!-- ===================== DUBAI ===================== -->
+<section id="dubai">
+  <h2>The Dubai angle — what genuinely helps, honestly</h2>
+  <p class="lede">You're in Dubai, so here's the straight answer on what your location does and doesn't do for you. No false
+  hope, but real tools where they exist.</p>
+
+  <div class="tblwrap"><table>
+    <thead><tr><th>Route in the UAE</th><th>Can it get your USDT unfrozen?</th></tr></thead>
+    <tbody>
+      <tr><td><b>UAE regulators</b> (VARA, Central Bank, SCA)</td><td class="no">No — they cannot order a foreign company to flip Tether's switch. This is the most common false hope.</td></tr>
+      <tr><td><b>DIFC Courts</b> (Dubai's English-language courts)</td><td class="part">Indirectly, yes — they treat crypto as property and can issue worldwide freezing &amp; disclosure orders to build your case and chase counterparties.</td></tr>
+      <tr><td><b>Dubai Police eCrime / prosecution</b></td><td class="part">Indirectly — filing as a victim creates an official record supporting your innocence.</td></tr>
+      <tr><td><b>Top UAE law firms</b></td><td class="part">Yes, as your team — they've run exactly these crypto-tracing and freezing cases (see below).</td></tr>
+      <tr><td><b>The agency that requested the freeze (likely US)</b></td><td class="yes">This is the real lever — usually needs US counsel working alongside your Dubai firm.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="card">
+    <h3>The honest summary</h3>
+    <p><strong>Being in Dubai is mostly neutral for reversing this exact freeze</strong> — because Tether is a foreign
+    company and the request likely came from a US agency. Dubai does <em>not</em> give you a button to force an unfreeze.</p>
+    <p><strong>But Dubai genuinely helps in three ways:</strong> (1) its <b>DIFC Courts</b> are respected, crypto-savvy, and
+    can order freezes and force information out of exchanges — they did exactly this in a ~$456M crypto case; (2) a
+    <b>police/prosecution record</b> as a victim strengthens your innocence story; and (3) you have access to <b>real, strong
+    firms</b> that do this work.</p>
+    <p><strong>The legal shield you carry everywhere:</strong> the "innocent receiver / good faith" defence exists in US law,
+    in UAE law (which protects "bona fide third parties"), and in Dubai's DIFC courts. That is the same shield described in
+    Step 7 — it travels with you into whichever court matters.</p>
+  </div>
+
+  <details>
+    <summary>Real Dubai firms that handle crypto freezing &amp; recovery (starting points to research — not endorsements)</summary>
+    <div class="inner">
+      <p>These firms publicly run virtual-asset disputes, tracing, and freezing orders in the UAE. Interview a few, check
+      their track record, and get a written assessment before signing:</p>
+      <ul class="plain">
+        <li><b>Al Tamimi &amp; Company</b> — led the ~$456M DIFC crypto-freezing case.</li>
+        <li><b>HFW (Holman Fenwick Willan)</b> — crypto asset-tracing and recovery.</li>
+        <li><b>Charles Russell Speechlys</b> — digital-asset disputes.</li>
+        <li><b>BSA Ahmad Bin Hezeem &amp; Associates</b> — UAE crypto/fraud disputes.</li>
+      </ul>
+      <p class="small">Good news on cost: UAE rules cap lawyer "success fees" at 25%, and reputable firms give an honest,
+      paid case assessment rather than a guarantee. Still expect a serious, five-to-six-figure budget for a contested $1.3M
+      cross-border fight.</p>
+    </div>
+  </details>
+</section>
+
+<!-- ===================== SCAMS ===================== -->
+<section id="scams">
+  <h2>The second trap: the recovery-scam wave</h2>
+  <p class="lede">People who've had funds frozen are hunted by a second wave of scammers who promise to "get it back". This is
+  a bigger threat to you right now than the freeze itself, because it can cost you <em>more</em> money. Read this carefully.</p>
+
+  <div class="card danger">
+    <div class="khead">The hard rules — memorise them</div>
+    <ul class="plain dont">
+      <li>Nobody can unfreeze your wallet for a fee. It is technically impossible for anyone but Tether.</li>
+      <li>Tether will <b>never</b> contact you on Telegram, WhatsApp, or by DM. Real contact is only via <b>@tether.to</b> email or through law enforcement.</li>
+      <li>No real agency (FBI, police, court, "compliance department") ever charges you a fee to return your money.</li>
+      <li>Anyone who already "knows your exact frozen amount" and messages you first is a scammer working from a victim list — not a rescuer.</li>
+    </ul>
+  </div>
+
+  <div class="card warn">
+    <div class="khead">Walk away instantly if you see any one of these</div>
+    <ul class="plain">
+      <li>They contacted <em>you</em> first (Telegram/WhatsApp/DM/comment).</li>
+      <li>Any upfront fee — "verification", "tax", "release", "security", "bank" — especially paid in crypto or gift cards.</li>
+      <li>A guarantee of success, or "your funds are already located and ready to release".</li>
+      <li>They claim to be from the FBI, FCA, a court, or "Tether compliance".</li>
+      <li>They ask you to connect your wallet to a site, "validate/sync" it, or share your secret phrase.</li>
+      <li>They refuse a video call or can't show a real, checkable licence.</li>
+    </ul>
+  </div>
+  <p style="margin-top:14px">The tokens sitting in your wallet with names like "UNFREEZE TG:…" are this scam in its purest
+  form. They are bait. <strong>Do not visit any link in them, do not reply, do not pay.</strong> Just leave them there —
+  they are harmless as long as you never interact with them.</p>
+</section>
+
+<!-- ===================== NEVER ===================== -->
+<section id="never">
+  <h2>The "never do this" list</h2>
+  <div class="card danger">
+    <ul class="plain dont">
+      <li>Never pay any fee to "unfreeze", "verify", "release", or "tax" the funds.</li>
+      <li>Never send crypto or gift cards to any "agent", "officer", or "recovery service".</li>
+      <li>Never connect your wallet to, or sign anything on, an "unfreeze / validate / sync" website.</li>
+      <li>Never type your 12/24-word secret recovery phrase into any website or share it with anyone — not even "support".</li>
+      <li>Never click or interact with the scam tokens in your wallet.</li>
+      <li>Never contact Tether or an agency cold, on your own, before your lawyer — words can be used against you.</li>
+      <li>Never hire a "recovery firm" that guarantees results, wants a big upfront third-party fee, or hides its office and licence.</li>
+      <li>Never take a "bridge loan" from someone who promises to speed up the unfreeze — nobody can, so the pitch is false.</li>
+      <li>Never ignore it hoping it fixes itself — deadlines are short and silence loses your rights.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===================== CASHFLOW ===================== -->
+<section id="cash">
+  <h2>Your cashflow &amp; your clients — the honest reality</h2>
+  <p class="lede">You told me the hardest part: money is owed to your clients and this freeze is choking you. Here's the
+  straight, caring truth so you can breathe and plan.</p>
+  <ul class="plain">
+    <li><b>Plan as if this money is gone for a long time — possibly for good.</b> Not to scare you, but so you don't build
+    promises on it. If it comes back, that's upside; if you plan around it and it doesn't, you're in trouble twice.</li>
+    <li><b>Don't let the frozen $1.3M anchor what you promise clients.</b> Treat it as "maybe, one day", never as cash on hand.</li>
+    <li><b>Beware the bridge-loan trap.</b> Anyone offering a fast loan "against" the frozen funds, or <em>because</em> they can
+    "speed up" the release, is either a scammer or a predator — nobody can speed up an unfreeze.</li>
+    <li><b>Use the "change of position" rule.</b> Because you've already committed this money to clients, the law may reduce
+    anything you'd ever have to give back. Document every client obligation and give it to your lawyer — it's part of your defence.</li>
+    <li><b>Talk to your clients honestly and early</b> about a delay, separately from this. A quiet, honest heads-up protects
+    relationships better than a missed silent deadline.</li>
+  </ul>
+</section>
+
+<!-- ===================== CONTACTS ===================== -->
+<section id="contacts">
+  <h2>Who to contact (and how)</h2>
+  <p class="lede">Save these. The Tether and agency contacts should be approached <em>through your lawyer</em>, not by you directly.</p>
+
+  <div class="hashrow"><span class="lbl">Tether support</span><code id="c1">https://cs.tether.to</code><button class="cbtn" data-copy="c1">Copy</button></div>
+  <div class="hashrow"><span class="lbl">Tether law-enforcement</span><code id="c2">inforequests@tether.to</code><button class="cbtn" data-copy="c2">Copy</button></div>
+  <div class="hashrow"><span class="lbl">US crime report (FBI)</span><code id="c3">https://www.ic3.gov</code><button class="cbtn" data-copy="c3">Copy</button></div>
+  <div class="hashrow"><span class="lbl">US seizure-case check</span><code id="c4">https://www.forfeiture.gov</code><button class="cbtn" data-copy="c4">Copy</button></div>
+  <div class="hashrow"><span class="lbl">Dubai Police eCrime</span><code id="c5">https://www.ecrime.ae</code><button class="cbtn" data-copy="c5">Copy</button></div>
+  <div class="hashrow"><span class="lbl">Check freeze status</span><code id="c6">https://blocksec.com/usdt-freeze-checker</code><button class="cbtn" data-copy="c6">Copy</button></div>
+  <div class="hashrow"><span class="lbl">Your wallet address</span><code id="c7">TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo</code><button class="cbtn" data-copy="c7">Copy</button></div>
+
+  <div class="callout" style="margin-top:20px">
+    <p><strong>Your very first move this week:</strong> pick and hire the right lawyer (Step 4). Everything else — contacting
+    Tether, the agency, the courts — should go through them. That single decision protects you from mistakes and from scammers,
+    and it's the thing most likely to get your money back.</p>
+  </div>
+</section>
+
+<div class="footer">
+  <b>About this plan:</b> written 8 July 2026 for the owner of TFBqWsFD5FcrZs4f1MbxKeB32pNAYk1tVo. The wallet's frozen status
+  (1,334,619.952212 USDT, still frozen, not burned) and the two sender wallets' current state were re-checked live on the TRON
+  blockchain and independently verified. The legal and recovery guidance was researched across multiple independent sources and
+  fact-checked. This is a practical plan, not a substitute for the lawyer you hire in Step 4 — it's what makes you a well-prepared
+  client who can't be fooled.
+  <div class="vline">verification: on-chain figures re-derived independently · legal facts cross-checked against primary sources · Bybit/sanctions link marked UNCONFIRMED pending your lawyer's tracing</div>
+</div>
+
+</div>
+<script>
+(function(){
+  function fallbackCopy(text){
+    var ta=document.createElement('textarea');
+    ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    var ok=false;
+    try{ ok=document.execCommand('copy'); }catch(e){ ok=false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  function flash(btn,ok){
+    var old=btn.textContent;
+    btn.textContent = ok ? 'Copied ✓' : 'Select & copy';
+    btn.classList.add('done');
+    setTimeout(function(){ btn.textContent=old; btn.classList.remove('done'); },1600);
+  }
+  document.querySelectorAll('.cbtn').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var el=document.getElementById(btn.getAttribute('data-copy'));
+      if(!el) return;
+      var text=el.textContent.trim();
+      if(navigator.clipboard && window.isSecureContext){
+        navigator.clipboard.writeText(text).then(function(){flash(btn,true);},function(){flash(btn,fallbackCopy(text));});
+      }else{
+        flash(btn,fallbackCopy(text));
+      }
+    });
+  });
+})();
+</script>
+</body>
+</html>
